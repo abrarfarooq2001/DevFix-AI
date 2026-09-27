@@ -26,6 +26,54 @@ console.log(users.map(user => user.name));`,
     Python: `numbers = [1, 2, 3, 4, 5]
 
 print(numbers.upper())`,
+
+    TypeScript: `interface User {
+  id: number;
+  name: string;
+}
+
+function getUser(id: number): User {
+  return { id, username: "Alice" };
+}`,
+
+    Java: `public class Main {
+  public static void main(String[] args) {
+    int[] numbers = {1, 2, 3};
+    System.out.println(numbers.length());
+  }
+}`,
+
+    "C++": `#include <iostream>
+#include <vector>
+
+int main() {
+  std::vector<int> nums = {1, 2, 3};
+  std::cout << nums[5] << std::endl;
+  return 0;
+}`,
+
+    Go: `package main
+
+import "fmt"
+
+func divide(a, b int) int {
+  return a / b
+}
+
+func main() {
+  fmt.Println(divide(10, 0))
+}`,
+
+    Rust: `fn main() {
+  let v = vec![1, 2, 3];
+  println!("{}", v[10]);
+}`,
+
+    SQL: `SELECT u.name, o.total
+FROM users u
+JOIN orders o ON u.id = o.user_id
+WHERE o.total > 100
+AND u.actve = true;`,
   };
 
   const analyzeCode = async () => {
@@ -149,8 +197,14 @@ print(numbers.upper())`,
                 }}
               >
                 <option value="JavaScript">JavaScript</option>
+                <option value="TypeScript">TypeScript</option>
                 <option value="React">React</option>
                 <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+                <option value="Go">Go</option>
+                <option value="Rust">Rust</option>
+                <option value="SQL">SQL</option>
               </select>
             </div>
 
