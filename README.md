@@ -69,12 +69,16 @@ Users can:
 
 ### AI
 
-* OpenAI API
+* Google Gemini (`gemini-3.5-flash-lite` via `@google/genai`)
 
 ### Deployment
 
 * Render
 * GitHub
+
+## 📝 Recent Improvements
+
+* **Multi-language expansion** — Support for additional programming languages was added with the assistance of [IBM Bob](https://www.ibm.com/bob).
 
 ## 🔄 How It Works
 
@@ -85,7 +89,7 @@ React Frontend
         ↓
 Backend API
         ↓
-OpenAI API
+Google Gemini API
         ↓
 AI analyzes the code
         ↓
